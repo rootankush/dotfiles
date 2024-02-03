@@ -9,12 +9,12 @@ Ensure you have the folling installed on your system
 ### Git
 
 ```
-sudo pacman -S git
+$ sudo pacman -S git
 ```
 
 ### Stow
 ```
-sudo pacman -S stow
+$ sudo pacman -S stow
 ```
 
 ## Installation
@@ -30,4 +30,10 @@ then use GNU stow to create symlinks
 
 ```
 $ stow .
+```
+
+## Guide Youtube Video
+
+```
+https://youtu.be/y6XCebnB9gs?si=X1saNfgNL4CBc_QP
 ```
