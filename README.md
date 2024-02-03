@@ -22,7 +22,7 @@ sudo pacman -S stow
 First, check out the dotfiles repo in your $HOME directory using git
 
 ```
-$ git clone git@github.com/dreamsofautonomy/dotfiles.git
+$ git clone git@github.com/rootankush/dotfiles.git
 $ cd dotfiles
 ```
 
