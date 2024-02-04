@@ -128,19 +128,16 @@ mod1 + f
 mod1 + e
        thunar
 
-# Volume control
-XF86AudioRaiseVolume
-	bash -c '~/.scripts/notify/change-volume up'
-
+#Volume Control
 XF86AudioLowerVolume
-   bash -c '~/.scripts/notify/change-volume down'
-
+	amixer set Master 5%-
+XF86AudioRaiseVolume
+	amixer set Master 5%+
 XF86AudioMute
-   bash -c '~/.scripts/notify/change-volume mute'
+        amixer set Master toggle
 
 # Brightness Control
 XF86MonBrightnessUp
-     bash -c '~/.scripts/notify/change-brightness up'
-
-XF86MonBrightnessDown
-    bash -c '~/.scripts/notify/change-brightness down' 
+        xbacklight -dec 5
+XF86MonBrightnessUp
+	xbacklight -inc 5
