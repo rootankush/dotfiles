@@ -14,7 +14,6 @@ mod1 + d
 mod1 + r
 	pkill -USR1 -x sxhkd
 
-#
 # bspwm hotkeys
 #
 
