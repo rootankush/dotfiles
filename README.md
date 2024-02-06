@@ -31,7 +31,22 @@ then use GNU stow to create symlinks
 ```
 $ stow .
 ```
+## ADD config or UPDATE config
 
+How to add config files to dotfiles or update dotfiles
+
+```
+$ cp -r [destination of file] .config
+$ git add .config
+$ git commit -m "(write somthing here)"
+$ git push origin main
+$ stow .
+```
+if after using stow . u get duplicate file error
+```
+$rm -r [the file u want to delete]
+```
+ 
 ## Guide Youtube Video
 
 ```
