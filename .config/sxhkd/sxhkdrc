@@ -121,7 +121,7 @@ mod1 + shift + {h,j,k,l}
 
 #filemanager
 mod1 + e
-       thunar
+       yazi
 
 #Volume Control
 XF86AudioLowerVolume
