@@ -18,3 +18,5 @@ nitrogen --restore &
 dunst &
 $HOME/.config/polybar/launch.sh
 #polybar &
+#Cursor
+xsetroot -cursor_name left_ptr
