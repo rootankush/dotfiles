@@ -1,42 +1,38 @@
 # A TOML linter such as https://taplo.tamasfe.dev/ can use this schema to validate your config.
 # If you encounter any issues, please make an issue at https://github.com/yazi-rs/schemas.
-# "$schema" = "https://yazi-rs.github.io/schemas/theme.json"
+"$schema" = "https://yazi-rs.github.io/schemas/theme.json"
 
 # vim:fileencoding=utf-8:foldmethod=marker
 
 # : Manager {{{
+
 [manager]
-cwd = { fg = "#8bd5ca" }
+cwd = { fg = "cyan" }
 
 # Hovered
-hovered         = { fg = "#24273a", bg = "#8aadf4" }
+hovered         = { fg = "black", bg = "lightblue" }
 preview_hovered = { underline = true }
 
 # Find
-find_keyword  = { fg = "#eed49f", italic = true }
-find_position = { fg = "#f5bde6", bg = "reset", italic = true }
+find_keyword  = { fg = "yellow", italic = true }
+find_position = { fg = "magenta", bg = "reset", italic = true }
 
 # Marker
-marker_copied   = { fg = "#a6da95", bg = "#a6da95" }
-marker_cut      = { fg = "#ed8796", bg = "#ed8796" }
-marker_selected = { fg = "#8aadf4", bg = "#8aadf4" }
+marker_selected = { fg = "lightgreen",  bg = "lightgreen" }
+marker_copied   = { fg = "lightyellow", bg = "lightyellow" }
+marker_cut      = { fg = "lightred",    bg = "lightred" }
 
 # Tab
-tab_active   = { fg = "#24273a", bg = "#cad3f5" }
-tab_inactive = { fg = "#cad3f5", bg = "#494d64" }
+tab_active   = { fg = "black", bg = "lightblue" }
+tab_inactive = { fg = "white", bg = "darkgray" }
 tab_width    = 1
-
-# Count
-count_copied   = { fg = "#24273a", bg = "#a6da95" }
-count_cut      = { fg = "#24273a", bg = "#ed8796" }
-count_selected = { fg = "#24273a", bg = "#8aadf4" }
 
 # Border
 border_symbol = "│"
-border_style  = { fg = "#8087a2" }
+border_style  = { fg = "gray" }
 
 # Highlighting
-syntect_theme = "~/.config/yazi/Catppuccin-macchiato.tmTheme"
+syntect_theme = ""
 
 # : }}}
 
@@ -46,78 +42,131 @@ syntect_theme = "~/.config/yazi/Catppuccin-macchiato.tmTheme"
 [status]
 separator_open  = ""
 separator_close = ""
-separator_style = { fg = "#494d64", bg = "#494d64" }
+separator_style = { fg = "darkgray", bg = "darkgray" }
 
 # Mode
-mode_normal = { fg = "#24273a", bg = "#8aadf4", bold = true }
-mode_select = { fg = "#24273a", bg = "#a6da95", bold = true }
-mode_unset  = { fg = "#24273a", bg = "#f0c6c6", bold = true }
+mode_normal = { fg = "black", bg = "lightblue", bold = true }
+mode_select = { fg = "black", bg = "lightgreen", bold = true }
+mode_unset  = { fg = "black", bg = "lightmagenta", bold = true }
 
 # Progress
-progress_label  = { fg = "#ffffff", bold = true }
-progress_normal = { fg = "#8aadf4", bg = "#494d64" }
-progress_error  = { fg = "#ed8796", bg = "#494d64" }
+progress_label  = { bold = true }
+progress_normal = { fg = "blue", bg = "black" }
+progress_error  = { fg = "red", bg = "black" }
 
 # Permissions
-permissions_t = { fg = "#8aadf4" }
-permissions_r = { fg = "#eed49f" }
-permissions_w = { fg = "#ed8796" }
-permissions_x = { fg = "#a6da95" }
-permissions_s = { fg = "#8087a2" }
+permissions_t = { fg = "lightgreen" }
+permissions_r = { fg = "lightyellow" }
+permissions_w = { fg = "lightred" }
+permissions_x = { fg = "lightcyan" }
+permissions_s = { fg = "darkgray" }
+
+# : }}}
+
+
+# : Select {{{
+
+[select]
+border   = { fg = "blue" }
+active   = { fg = "magenta" }
+inactive = {}
+
+# : }}}
+
+
+# : Input {{{
 
 [input]
-border   = { fg = "#8aadf4" }
+border   = { fg = "blue" }
 title    = {}
 value    = {}
 selected = { reversed = true }
 
-[select]
-border   = { fg = "#8aadf4" }
-active   = { fg = "#f5bde6" }
+# : }}}
+
+
+# : Completion {{{
+
+[completion]
+border   = { fg = "blue" }
+active   = { bg = "darkgray" }
 inactive = {}
 
+# Icons
+icon_file    = ""
+icon_folder  = ""
+icon_command = ""
+
+# : }}}
+
+
+# : Tasks {{{
+
 [tasks]
-border  = { fg = "#8aadf4" }
+border  = { fg = "blue" }
 title   = {}
 hovered = { underline = true }
 
+# : }}}
+
+
+# : Which {{{
+
 [which]
-mask            = { bg = "#363a4f" }
-cand            = { fg = "#8bd5ca" }
-rest            = { fg = "#939ab7" }
-desc            = { fg = "#f5bde6" }
+cols            = 3
+mask            = { bg = "black" }
+cand            = { fg = "lightcyan" }
+rest            = { fg = "darkgray" }
+desc            = { fg = "magenta" }
 separator       = "  "
-separator_style = { fg = "#5b6078" }
+separator_style = { fg = "darkgray" }
+
+# : }}}
+
+
+# : Help {{{
 
 [help]
-on      = { fg = "#f5bde6" }
-exec    = { fg = "#8bd5ca" }
-desc    = { fg = "#939ab7" }
-hovered = { bg = "#5b6078", bold = true }
-footer  = { fg = "#494d64", bg = "#cad3f5" }
+on      = { fg = "magenta" }
+exec    = { fg = "cyan" }
+desc    = { fg = "gray" }
+hovered = { bg = "darkgray", bold = true }
+footer  = { fg = "black", bg = "white" }
+
+# : }}}
+
+
+# : File-specific styles {{{
 
 [filetype]
 
 rules = [
 	# Images
-	{ mime = "image/*", fg = "#8bd5ca" },
+	{ mime = "image/*", fg = "cyan" },
 
 	# Videos
-	{ mime = "video/*", fg = "#eed49f" },
-	{ mime = "audio/*", fg = "#eed49f" },
+	{ mime = "video/*", fg = "yellow" },
+	{ mime = "audio/*", fg = "yellow" },
 
 	# Archives
-	{ mime = "application/zip",             fg = "#f5bde6" },
-	{ mime = "application/gzip",            fg = "#f5bde6" },
-	{ mime = "application/x-tar",           fg = "#f5bde6" },
-	{ mime = "application/x-bzip",          fg = "#f5bde6" },
-	{ mime = "application/x-bzip2",         fg = "#f5bde6" },
-	{ mime = "application/x-7z-compressed", fg = "#f5bde6" },
-	{ mime = "application/x-rar",           fg = "#f5bde6" },
+	{ mime = "application/zip",             fg = "magenta" },
+	{ mime = "application/gzip",            fg = "magenta" },
+	{ mime = "application/x-tar",           fg = "magenta" },
+	{ mime = "application/x-bzip",          fg = "magenta" },
+	{ mime = "application/x-bzip2",         fg = "magenta" },
+	{ mime = "application/x-7z-compressed", fg = "magenta" },
+	{ mime = "application/x-rar",           fg = "magenta" },
+	{ mime = "application/xz",              fg = "magenta" },
+
+	# Documents
+	{ mime = "application/doc",   fg = "green" },
+	{ mime = "application/pdf",   fg = "green" },
+	{ mime = "application/rtf",   fg = "green" },
+	{ mime = "application/vnd.*", fg = "green" },
 
 	# Fallback
-	{ name = "*", fg = "#cad3f5" },
-	{ name = "*/", fg = "#8aadf4" }
+	# { name = "*", fg = "white" },
+	{ name = "*/", fg = "blue" }
 ]
 
 [icon]
