@@ -15,6 +15,8 @@ mod1 + r
 	pkill -USR1 -x sxhkd
 
 # bspwm hotkeys
+mod1 + shift + r
+  pkill -USR1 -x polybar
 #
 
 # quit/restart bspwm

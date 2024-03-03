@@ -19,8 +19,10 @@ bspc config focused_border_color "#00000000"
 sxhkd &
 picom --config $HOME/.config/picom/picom.conf &
 nitrogen --restore &
-dunst &
+killall notification-daemon
+killall dunst
+dunst -config ~/.config/dunst/dunstrc &
 $HOME/.config/polybar/launch.sh &
 # polybar &
 #Cursor
-xsetroot -cursor_name left_ptr
+xsetroot -cursor_name left_ptr &
