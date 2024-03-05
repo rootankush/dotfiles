@@ -17,7 +17,7 @@
 ;==========================================================
 
 [mocha]
-background = #181825
+background = #1E1E2E
 background-alt = #11111b
 foreground = #cdd6f4
 primary = #cdd6f4
@@ -25,191 +25,97 @@ secondary = #a6adc8
 alert = #f38ba8
 disabled = #45475a
 
-[bar/mybar]
-width = 100%
-dpi = 192
-height = 30pt
-radius = 0 
+include-file = /home/ankush/.config/polybar/modules.ini
+; include-file = /home/ankush/.config/polybar/fonts.ini
+
+[bar/mybar1]
+width = 10%
+height = 27pt
+radius = 0
+dpi = 96
 background = ${mocha.background}
 foreground = ${mocha.foreground}
-line-size = 0pt
+line-size = 4pt
 fixed-center = true
-border-size = 4pt
-border-color = #00000000
-padding-left = 1
-padding-right = 1
-module-margin = 2
-separator = |
-separator-foreground = ${mocha.disabled}
-font-0 = monospace;2
-modules-left = xworkspaces xwindow
-modules-right = pulseaudio memory cpu wlan eth date battery
+border-left-size = 2
+border-right-size = 2
+border-top-size = 2
+border-bottom-size = 2
+; border-color = #FFEA00
+border-color = #08D9D6
+offset-x = 30
+offset-y = 20
+padding-left = 2
+padding-right = 2
+margin-top = 1
+margin-bottom = 1
+separagtor = |
+modules-center = date
 cursor-click = pointer
 cursor-scroll = ns-resize
 enable-ipc = true
-
-; wm-restack = generic
+font-0 = FiraCode Nerd Font:size=12;2
 wm-restack = bspwm
-; wm-restack = i3
-; override-redirect = true
 
-[module/systray]
-type = internal/tray
+[bar/mybar2]
+width = 12%
+height = 27pt
+radius = 0
+dpi = 96
+background = ${mocha.background}
+foreground = ${mocha.foreground}
+line-size = 4pt
+fixed-center = true
+border-left-size = 2
+border-right-size = 2
+border-top-size = 2
+border-bottom-size = 2
+; border-color = #FFEA00
+border-color = #08D9D6
+offset-x = 850
+offset-y = 20
+padding-left = 2
+padding-right = 2
+margin-top = 1
+margin-bottom = 1
+separagtor = |
+modules-center = bspwm
+cursor-click = pointer
+cursor-scroll = ns-resize
+enable-ipc = true
+font-0 = FiraCode Nerd Font:size=12;2
+wm-restack = bspwm
 
-format-margin = 8pt
-tray-spacing = 16pt
-
-[module/xworkspaces]
-type = internal/xworkspaces
-
-label-active = %name%
-label-active-background = ${mocha.background-alt}
-label-active-underline= ${mocha.primary}
-label-active-padding = 1
-
-label-occupied = %name%
-label-occupied-padding = 1
-
-label-urgent = %name%
-label-urgent-background = ${mocha.alert}
-label-urgent-padding = 1
-
-label-empty = %name%
-label-empty-foreground = ${mocha.disabled}
-label-empty-padding = 1
-
-[module/xwindow]
-type = internal/xwindow
-label = %title:0:60:...%
-
-[module/filesystem]
-type = internal/fs
-interval = 25
-
-mount-0 = /
-
-label-mounted = %{F#F0C674}%mountpoint%%{F-} %percentage_used%%
-
-label-unmounted = %mountpoint% not mounted
-label-unmounted-foreground = ${mocha.disabled}
-
-[module/pulseaudio]
-type = internal/pulseaudio
-
-format-volume-prefix = "VOL "
-format-volume-prefix-foreground = ${mocha.primary}
-format-volume = <label-volume>
-
-label-volume = %percentage%%
-
-label-muted = muted
-label-muted-foreground = ${mocha.disabled}
-
-[module/xkeyboard]
-type = internal/xkeyboard
-blacklist-0 = num lock
-
-label-layout = %layout%
-label-layout-foreground = ${mocha.primary}
-
-label-indicator-padding = 2
-label-indicator-margin = 1
-label-indicator-foreground = ${mocha.background}
-label-indicator-background = ${mocha.foreground}
-
-[module/memory]
-type = internal/memory
-interval = 2
-format-prefix = "RAM "
-format-prefix-foreground = ${mocha.primary}
-label = %percentage_used:2%%
-
-[module/cpu]
-type = internal/cpu
-interval = 2
-format-prefix = "CPU "
-format-prefix-foreground = ${mocha.primary}
-label = %percentage:2%%
-
-[network-base]
-type = internal/network
-interval = 5
-format-connected = <label-connected>
-format-disconnected = <label-disconnected>
-label-disconnected = %{F#F0C674}%ifname%%{F#707880} disconnected
-
-[module/wlan]
-inherit = network-base
-interface-type = wireless
-label-connected = %{F#F0C674}%ifname%%{F-} %essid% %local_ip%
-
-[module/eth]
-inherit = network-base
-interface-type = wired
-label-connected = %{F#F0C674}%ifname%%{F-} %local_ip%
-
-[module/date]
-type = internal/date
-interval = 1
-
-date = %I:%M
-date-alt = %Y-%m-%d %I:%M:%S
-
-label = %date%
-label-foreground = ${mocha.primary}
-
-[module/battery]
-type = internal/battery
-format-prefix = " BAT "
-format-prefix-foreground = ${mocha.primary}
-full-at = 99
-low-at = 5
-battery = BAT0
-adapter = ACAD
-poll-interval = 5
-format-foreground = ${color.foreground}
-format-background = ${color.background}
+[bar/mybar3]
+width = 20%
+height = 27pt
+radius = 0
+dpi = 96
+background = ${mocha.background}
+foreground = ${mocha.foreground}
+line-size = 4pt
+fixed-center = true
+border-left-size = 2
+border-right-size = 2
+border-top-size = 2
+border-bottom-size = 2
+; border-color = #FFEA00
+border-color = #08D9D6
+offset-x = 1505
+offset-y = 20
+padding-left = 2
+padding-right = 2
+margin-top = 1
+margin-bottom = 1
+separagtor = |
+modules-center = pulseaudio wlan battery
+cursor-click = pointer
+cursor-scroll = ns-resize
+enable-ipc = true
+font-0 = FiraCode Nerd Font:size=12;2
+wm-restack = bspwm
 
 [settings]
 screenchange-reload = true
 pseudo-transparency = true
 
-; vim:ft=dosini
-
-[module/bspwm]
-type = internal/bspwm
-
-; Only show workspaces defined on the same output as the bar
-; NOTE: The bspwm and XRandR monitor names must match, which they do by default.
-; But if you rename your bspwm monitors with bspc -n this option will no longer
-; behave correctly.
-; Default: true
-pin-workspaces = true
-
-; Output mode flags after focused state label
-; Default: false
-inline-mode = false
-
-; Create click handler used to focus workspace
-; Default: true
-enable-click = false
-
-; Create scroll handlers used to cycle workspaces
-; Default: true
-enable-scroll = false
-
-; Set the scroll cycle direction 
-; Default: true
-reverse-scroll = true
-
-; Use fuzzy (partial) matching on labels when assigning 
-; icons to workspaces
-; Example: code;♚ will apply the icon to all workspaces 
-; containing 'code' in the label
-; Default: false
-fuzzy-match = true
-
-; Only scroll through occupied workspaces
-; Default: false
-; New in version 3.6.0
-occupied-scroll = true
