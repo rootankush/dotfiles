@@ -1,0 +1,26 @@
+(defwindow powermenu
+  :monitor 0 ;; Optional for X11
+  :stacking "fg"
+  :windowtype "normal"
+  :wm-ignore true
+  :geometry (geometry
+              :width "10%"
+              :height "10%")
+  (powermenu_layout))
+
+(defwidget powermenu_layout[]
+  (box :class "layout-box" :space-evenly false :orientation "vertical"
+)
+(defwidget _buttons [shutdown shutdown_icon reboot
+                    reboot_icon logout logout_icon]
+  (box :class "btns-box" :spacing 5
+       :vexpand true :hexpand true
+       :valign "end" :halign "end"
+       :space-evenly false
+    (button :onclick shutdown shutdown_icon)
+    (button :onclick reboot reboot_icon)
+    (button :onclick logout logout_icon)))
+
+
+
+;; vim:ft=yuck
