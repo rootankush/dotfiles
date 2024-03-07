@@ -49,13 +49,14 @@ floating_modifier $mod
 tiling_drag modifier titlebar
 
 # start a terminal
-bindsym $mod+w exec alacritty
+bindsym $mod+w exec kitty
 
 # kill focused window
 bindsym $mod+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id dmenu_run
+# bindsym $mod+d exec --no-startup-id dmenu_run
+bindsym $mod+d exec rofi -show drun
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+r exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
