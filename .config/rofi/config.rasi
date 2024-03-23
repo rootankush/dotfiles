@@ -1,7 +1,7 @@
 @theme "/dev/null"
 
 * {
-	bg: #181E27;
+	bg: #1E1E2E;
 	background-color: @bg;
 }
 
@@ -11,14 +11,17 @@ configuration {
 	icon-theme: "Papirus";
 	location: 0;
 	font: "FiraCode Nerd Font 12";	
-	display-drun: "Launch:";
+	display-drun: "Wht u want!!:";
 }
 
 window { 
-	width: 35%;
+	width: 30%;
+  location: center;
 	transparency: "real";
-	orientation: vertical;
-	border-color: #74adc0;
+	orientation: horizontal;
+  border: 1px;
+  border-radius: 10px 10px 10px 10px;
+	border-color: #FFFFFF;
 }
 
 mainbox {
@@ -44,17 +47,17 @@ element-text {
 }
 
 element-icon {
-	size: 16 px;
+	size: 25 px;
 	background-color: inherit;
 	padding: 0 6 0 0;
 	alignment: vertical;
 }
 
 listview {
-	columns: 2;
-	lines: 9;
-	padding: 8 0;
-	fixed-height: true;
+	columns: 1;
+	lines: 6;
+	padding: 10 10;
+	fixed-height: false;
 	fixed-columns: true;
 	fixed-lines: true;
 	border: 0 10 6 10;
@@ -70,8 +73,8 @@ entry {
 }
 
 inputbar {
-	background-image: url("~/.config/rofi/wallpaper/ign_anime-girls-with-gun.png", width);
-	padding: 180 0 0;
+	background-image: url("~/.config/rofi/wallpaper/forest.png", width);
+	padding: 220 0 0;
 	margin: 0 0 0 0;
 } 
 

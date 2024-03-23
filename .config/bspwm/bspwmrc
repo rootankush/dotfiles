@@ -2,18 +2,19 @@
 
 pgrep -x sxhkd >/dev/null || sxhkd &
 
-bspc monitor -d 1 2 3 4 5
+bspc monitor -d I II III IV V
 #Window decoration
-bspc config border_width 2
-bspc config window_gap 25
+bspc config border_width 1
+bspc config window_gap 20
 
 bspc config split_ratio 0.52
 bspc config borderless_monocle true
 bspc config gapless_monocle true
 #Border color
-bspc config normal_border_color "#08D9D6"
-bspc config active_border_color "#08D9D6"
-bspc config focused_border_color "#08D9D6"
+bspc config normal_border_color "#FFFFFF"
+bspc config active_border_color "#FFFFFF"
+bspc config focused_border_color "#FFFFFF"
+#bspc config focused_border_color "#08D9D6"
 
 #AutoStart applications
 sxhkd &
