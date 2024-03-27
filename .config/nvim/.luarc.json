@@ -1,0 +1,9 @@
+{
+    "diagnostics.globals": [
+        "opts",
+        "null_ls"
+    ],
+    "diagnostics.disable": [
+        "missing-fields"
+    ]
+}
