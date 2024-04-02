@@ -5,6 +5,7 @@ This directory contains the dotfiles for my system
 
 ![2024-04-03-02:11:50-screenshot](https://github.com/rootankush/dotfiles/assets/141507921/9d886412-21db-466b-9487-6aca0d522219)
 
+![rofi](https://github.com/rootankush/dotfiles/assets/141507921/70ce79d6-f640-454f-8188-9cd4d4ae549f)
 
 ## Requirements
 
