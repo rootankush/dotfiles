@@ -3,6 +3,9 @@
 This directory contains the dotfiles for my system
 ![2024-04-03-02:11:40-screenshot](https://github.com/rootankush/dotfiles/assets/141507921/7b9ad164-5fe1-4847-b94a-094239f650e1)
 
+![2024-04-03-02:11:50-screenshot](https://github.com/rootankush/dotfiles/assets/141507921/9d886412-21db-466b-9487-6aca0d522219)
+
+
 ## Requirements
 
 Ensure you have the folling installed on your system
