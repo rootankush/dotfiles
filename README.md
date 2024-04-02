@@ -1,3 +1,7 @@
+![Desktop](file:///home/ankush/Pictures/Screenshots/2024-04-03-02:11:40-screenshot.png)
+
+![neofetch && kitty](file:///home/ankush/Pictures/Screenshots/2024-04-03-02:11:50-screenshot.png)
+
 # My Dotfiles
 
 This directory contains the dotfiles for my system
