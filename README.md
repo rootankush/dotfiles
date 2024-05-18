@@ -49,7 +49,7 @@ $ stow .
 ```
 if after using stow . u get duplicate file error
 ```
-$rm -r [the file u want to delete]
+$ rm -r [the file u want to delete]
 ```
  
 ## Guide Youtube Video
