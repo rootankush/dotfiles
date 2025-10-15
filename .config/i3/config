@@ -16,6 +16,9 @@ exec_always xrandr --output Virtual-1 --mode 1920x1080
 exec_always --no-startup-id xinput enable 13
 exec_always emacs --daemon
 exec_always /home/ankush/.config/polybar/launch.sh
+exec_always --no-startup-id ~/.config/i3/scripts/low_battery_notify.sh
+exec_always --no-startup-id ~/.config/i3/scripts/autotiling
+
 # Swap Esc and Caps Lock
 exec_always --no-startup-id setxkbmap -option caps:swapescape
 
@@ -45,7 +48,7 @@ bindsym Print exec --no-startup-id maim --select "$screenshot-dir/screenshot-$(d
 # Launch Apps
 bindsym $mod+q exec kitty
 bindsym $mod+c kill
-bindsym $mod+d exec --no-startup-id rofi -show drun -config ~/.config/rofi/i3.rasi
+bindsym $mod+d exec --no-startup-id ~/.config/rofi/launchers/type-7/launcher.sh
 bindsym $mod+t exec emacsclient -c -n
 
 # change focus
@@ -176,12 +179,12 @@ set $red #F7768E
 set $green #9ECE6A
 
 # Default border, background, text colors
-client.focused $accent $bg $fg
+client.focused $bg $bg $fg
 client.focused_inactive $bg $bg $fg
 client.unfocused $bg $bg $fg
 client.urgent $red $bg $fg
 
-default_border pixel
+default_border none
 
 gaps inner 15
 gaps outer 15
