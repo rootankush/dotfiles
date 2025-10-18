@@ -23,7 +23,8 @@ exec_always --no-startup-id ~/.config/i3/scripts/autotiling
 exec_always --no-startup-id setxkbmap -option caps:swapescape
 
 #display
-exec_always feh --bg-fill /home/ankush/.wallpaper/anime/a_cartoon_of_a_woman_with_her_hands_on_her_face.jpg
+# exec_always feh --bg-fill /home/ankush/.wallpaper/anime/a_cartoon_of_a_woman_with_her_hands_on_her_face.jpg
+exec_always feh --bg-fill /home/ankush/.wallpaper/anime/a_cartoon_of_a_woman_sitting_on_a_table_with_an_umbrella.jpg
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
