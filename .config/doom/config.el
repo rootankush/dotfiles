@@ -36,7 +36,6 @@
 ;; `load-theme' function. This is the default:
 ; (setq doom-theme 'doom-tomorrow-night)
 (use-package kanagawa-themes
-  :ensure t
   :config
   (load-theme 'kanagawa-dragon t))
 
