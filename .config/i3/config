@@ -23,7 +23,7 @@ exec_always --no-startup-id ~/.config/i3/scripts/autotiling
 exec_always --no-startup-id setxkbmap -option caps:swapescape
 
 #display
-exec_always feh --bg-fill /home/ankush/.wallpaper/anime/a_girl_standing_in_front_of_a_guitar_case.jpg
+exec_always feh --bg-fill /home/ankush/.wallpaper/girl.png
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -171,19 +171,30 @@ mode "resize" {
 bindsym $mod+b mode "resize"
 
 # Border & Colors
-# i3 colors (Kanagawa wave-inspired)
-set $bg #1F1F28
-set $fg #DCD7BA
-set $accent #7E9CD8
-set $red #F7768E
-set $green #9ECE6A
+# --- Gruvbox Dark Medium Color Definitions ---
+set $bg      #282828
+set $fg      #ebdbb2
+set $red     #cc241d
+set $orange  #d65d0e
+set $yellow  #d79921
+set $green   #98971a
+set $blue    #458588
+set $purple  #b16286
+set $aqua    #689d68
+set $urgent  #fb4934  # Red for urgency
+set $bright_yellow #fabd2f # Brighter Yellow/Orange for emphasis
 
-# Default border, background, text colors
-client.focused $bg $bg $fg
-client.focused_inactive $bg $bg $fg
-client.unfocused $bg $bg $fg
-client.urgent $red $bg $fg
+# The border color you will use most for *Focused* windows
+set $focused_border $yellow
+# The border color for *Inactive* windows (a subtle background shade)
+set $inactive_border #504945
 
+# class                  border            background      text            indicator       child_border
+client.focused           $focused_border   $focused_border $bg             $focused_border $focused_border
+client.focused_inactive  $inactive_border  $inactive_border $fg            $inactive_border $inactive_border
+client.unfocused         $bg               $bg             $inactive_border $bg            $bg
+client.urgent            $urgent           $urgent         $bg             $urgent         $urgent
+client.placeholder       $bg               $bg             $fg             $bg             $bg
 # default_border normal 2
 default_border pixel 2
 
