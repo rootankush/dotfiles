@@ -48,7 +48,7 @@ bindsym Print exec --no-startup-id maim --select "$screenshot-dir/screenshot-$(d
 # Launch Apps
 bindsym $mod+q exec kitty
 bindsym $mod+c kill
-bindsym $mod+d exec --no-startup-id ~/.config/rofi/launchers/type-7/launcher.sh
+bindsym $mod+d exec --no-startup-id ~/.config/rofi/launchers/type-1/launcher.sh
 bindsym $mod+t exec emacsclient -c -a 'emacs' 
 bindsym $mod+Shift+p exec i3lock -c 000000
 
