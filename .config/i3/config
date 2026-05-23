@@ -1,4 +1,4 @@
-#===========
+#==========
 # i3 Config 
 #===========
 
@@ -10,12 +10,19 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id nm-applet
 exec --no-startup-id dunst
+# exec --no-startup-id picom
 
 #Always
 exec_always xrandr --output Virtual-1 --mode 1920x1080
 exec_always --no-startup-id xinput enable 13
 exec_always --no-startup-id emacs --daemon
+exec_always --no-startup-id xsettingsd &
+
 # exec_always /home/ankush/.config/polybar/launch.sh
+# Add these to your i3 config
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec --no-startup-id dbus-update-activation-environment --systemd
+exec --no-startup-id xdg-desktop-portal-gtk
 exec_always --no-startup-id ~/.config/i3/scripts/low_battery_notify.sh
 exec_always --no-startup-id ~/.config/i3/scripts/autotiling
 
@@ -23,7 +30,7 @@ exec_always --no-startup-id ~/.config/i3/scripts/autotiling
 exec_always --no-startup-id setxkbmap -option caps:swapescape
 
 #display
-exec_always feh --bg-fill /home/ankush/.wallpaper/a_man_sitting_in_a_chair.png
+exec_always feh --bg-fill /home/ankush/.wallpaper/a_foggy_landscape_with_trees_and_grass.jpg
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -50,6 +57,7 @@ bindsym $mod+q exec kitty
 bindsym $mod+c kill
 bindsym $mod+d exec --no-startup-id ~/.config/rofi/launchers/type-1/launcher.sh
 bindsym $mod+t exec emacsclient -c -a 'emacs' 
+bindsym $mod+w exec nautilus
 bindsym $mod+Shift+p exec i3lock -c 000000
 
 # change focus
@@ -182,8 +190,8 @@ set $green   #98971a
 set $blue    #458588
 set $purple  #b16286
 set $aqua    #689d68
-set $urgent  #fb4934  # Red for urgency
-set $bright_yellow #fabd2f # Brighter Yellow/Orange for emphasis
+set $urgent  #fb4934  
+set $bright_yellow #fabd2f 
 
 # The border color you will use most for *Focused* windows
 set $focused_border $yellow
@@ -200,7 +208,7 @@ client.placeholder       $bg               $bg             $fg             $bg  
 default_border pixel 2
 
 gaps inner 10
-gaps outer 5
+gaps outer 8
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
